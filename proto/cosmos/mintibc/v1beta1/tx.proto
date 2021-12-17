@@ -1,0 +1,24 @@
+syntax = "proto3";
+package cosmos.mintibc.v1beta1;
+
+import "cosmos/base/v1beta1/coin.proto";
+import "cosmos_proto/cosmos.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/cosmos/cosmos-sdk/x/mintIbc/types";
+
+// MsgMintIBC defines a MsgMintIBC message which is used to mint IBC coins.
+service Msg {
+  rpc MintIBC(MintIBCMsg) returns (MintIBCResp);
+}
+
+//MintIBCMsg defines a MsgMintIBC message which is used to mint IBC coins.
+message MintIBCMsg {
+  string from_address = 1;
+  string amount = 2;
+}
+
+message MintIBCResp {
+  string hash = 1;
+  string height = 2;
+}

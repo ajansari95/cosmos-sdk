@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package cosmos.mintIbc.v1beta1;
+option go_package = "github.com/cosmos/cosmos-sdk/x/mintIbc/types";
+
+message GenesisState{
+
+}
